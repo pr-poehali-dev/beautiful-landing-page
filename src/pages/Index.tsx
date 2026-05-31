@@ -14,10 +14,10 @@ const NAV_LINKS = [
 ];
 
 const SERVICES = [
-  { icon: "Plane", title: "Авиабилеты", desc: "Все авиакомпании мира. Прямые и стыковочные рейсы. Бизнес и эконом класс.", price: "от 499 ₽" },
-  { icon: "Train", title: "ЖД билеты", desc: "Все направления по России. Купе, плацкарт, СВ. Онлайн-бронирование.", price: "от 299 ₽" },
-  { icon: "Globe", title: "Чартерные рейсы", desc: "Эксклюзивные туры и групповые поездки. Специальные цены для групп.", price: "по запросу" },
-  { icon: "Shield", title: "Страхование", desc: "Туристические страховки для путешествий. Медицинская и багажная защита.", price: "от 150 ₽" },
+  { icon: "Plane", title: "Авиабилеты", desc: "Все авиакомпании мира. Прямые и стыковочные рейсы. Бизнес и эконом класс." },
+  { icon: "Train", title: "ЖД билеты", desc: "Все направления по России. Купе, плацкарт, СВ. Онлайн-бронирование." },
+  { icon: "Globe", title: "Чартерные рейсы", desc: "Эксклюзивные туры и групповые поездки. Специальные цены для групп." },
+  { icon: "Shield", title: "Страхование", desc: "Туристические страховки для путешествий. Медицинская и багажная защита." },
 ];
 
 const PORTFOLIO = [
@@ -257,7 +257,6 @@ export default function Index() {
                   </div>
                   <h3 className="font-oswald text-xl font-semibold uppercase mb-3 group-hover:text-[#e8b84b] transition-colors">{s.title}</h3>
                   <p className="text-white/40 text-sm leading-relaxed mb-6">{s.desc}</p>
-                  <div className="font-oswald text-lg text-[#e8b84b] font-bold">{s.price}</div>
                   <div className="w-0 group-hover:w-full h-px bg-[#e8b84b] mt-4 transition-all duration-500" />
                 </div>
               </AnimSection>
