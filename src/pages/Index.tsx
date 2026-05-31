@@ -34,6 +34,12 @@ const TRAVEL = [
     desc: "Озеро Шира, Сундуки, Хакасский заповедник — уникальная природа Южной Сибири у порога.",
     tag: "Природа",
     emoji: "🏔️",
+    details: [
+      "🌊 Озеро Шира — крупнейшее солёное озеро Хакасии. Лечебные грязи, санатории, пляжи. Лучшее время — июнь–август.",
+      "🪨 Сундуки — пять скальных массивов, древняя «обсерватория». Панорамные виды на степь и горы.",
+      "🌿 Хакасский заповедник — краснокнижные животные, кедровая тайга, нетронутая природа.",
+      "🏕️ Как добраться: авто или автобус из Абакана (70–150 км). Помогу организовать трансфер.",
+    ],
   },
   {
     region: "Хакасия",
@@ -41,6 +47,12 @@ const TRAVEL = [
     desc: "Салбыкский курган, Большой Салбык — загадочные памятники древних цивилизаций.",
     tag: "История",
     emoji: "🗿",
+    details: [
+      "⛰️ Большой Салбыкский курган — один из крупнейших в мире, возраст более 2500 лет. Огромные каменные плиты весом до 50 тонн.",
+      "🎨 Петроглифы Белого Июса — наскальные рисунки эпохи бронзы. Более 3000 изображений животных и людей.",
+      "🏛️ Хакасский краеведческий музей в Абакане — богатейшая коллекция артефактов тагарской культуры.",
+      "🗺️ Маршрут «Степные пирамиды» — однодневная экскурсия из Абакана по главным историческим памятникам.",
+    ],
   },
   {
     region: "Красноярский край",
@@ -48,13 +60,25 @@ const TRAVEL = [
     desc: "Знаменитый заповедник со скальными останцами. Идеально для активного отдыха.",
     tag: "Активный",
     emoji: "🧗",
+    details: [
+      "🪨 Заповедник «Столбы» — сиенитовые скалы высотой до 100 м, уникальная флора и фауна. Площадь — 47 тысяч га.",
+      "🚡 Канатная дорога «Бобровый лог» — панорамный подъём, горнолыжный склон зимой, трекинг летом.",
+      "🏙️ Красноярск — миллионник с Театральной площадью, набережной Енисея, музеем Сурикова.",
+      "✈️ Как добраться: авиарейс Абакан–Красноярск (1 час) или поезд (8–10 часов). Оформлю билеты быстро.",
+    ],
   },
   {
     region: "Тыва",
-    title: "Туva — край шаманов",
+    title: "Тыва — край шаманов",
     desc: "Кызыл, центр Азии, горловое пение. Экзотика совсем рядом — 5 часов от Абакана.",
     tag: "Экзотика",
     emoji: "🎶",
+    details: [
+      "🌍 Кызыл — столица Тывы, здесь находится географический центр Азии. Обелиск «Центр Азии» на берегу Енисея.",
+      "🎵 Горловое пение хоомей — уникальное нематериальное наследие ЮНЕСКО. Концерты и мастер-классы для туристов.",
+      "🏛️ Национальный музей им. Алдан-Маадыр — золото скифов, шаманские артефакты, этнографические коллекции.",
+      "🚌 Как добраться: автобус Абакан–Кызыл (5–6 часов) или личный авто по живописной трассе через Саяны.",
+    ],
   },
   {
     region: "Алтай",
@@ -62,6 +86,12 @@ const TRAVEL = [
     desc: "Чуйский тракт, Телецкое озеро, Мультинские озёра. Один из красивейших регионов России.",
     tag: "Горы",
     emoji: "⛰️",
+    details: [
+      "🛣️ Чуйский тракт — один из красивейших трактов мира по версии National Geographic. Горные перевалы, долины рек.",
+      "💧 Телецкое озеро — «Алтайский Байкал», глубина 325 м, объект ЮНЕСКО. Водопады Корбу и Чодор.",
+      "🏔️ Мультинские озёра — жемчужина Алтая, пешие маршруты через тайгу, нетронутая природа.",
+      "🚗 Как добраться: авторейс или ЖД до Бийска, далее по Чуйскому тракту. Помогу с маршрутом и билетами.",
+    ],
   },
   {
     region: "Иркутская область",
@@ -69,6 +99,12 @@ const TRAVEL = [
     desc: "Глубочайшее озеро планеты. Листвянка, КБЖД, Ольхон — места, которые меняют восприятие мира.",
     tag: "Озеро",
     emoji: "🌊",
+    details: [
+      "🏝️ Остров Ольхон — сакральное место бурятской культуры. Скала Шаманка, мыс Хобой, бесконечные пляжи.",
+      "🚂 КБЖД — Кругобайкальская железная дорога. Уникальный инженерный памятник вдоль берега Байкала.",
+      "🏘️ Листвянка — главный туристический посёлок. Нерпинарий, Байкальский музей, рынок омуля.",
+      "✈️ Как добраться: авиарейс Абакан–Иркутск (1,5 часа) или поезд (15–18 часов). Оформлю любой вариант.",
+    ],
   },
 ];
 
@@ -96,6 +132,62 @@ function AnimSection({ children, className = "" }: { children: React.ReactNode; 
   return (
     <div ref={ref} className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} ${className}`}>
       {children}
+    </div>
+  );
+}
+
+function TravelCards() {
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+
+  return (
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {TRAVEL.map((t, i) => {
+        const isOpen = openIdx === i;
+        return (
+          <AnimSection key={t.title}>
+            <div
+              className={`border transition-all duration-300 cursor-pointer ${isOpen ? "border-[#e8b84b]/50 bg-[#0d1a30]" : "border-white/8 hover:border-[#e8b84b]/30 hover:bg-[#0d1a30]"}`}
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <div className="p-8" onClick={() => setOpenIdx(isOpen ? null : i)}>
+                <div className="flex items-start justify-between mb-6">
+                  <span className="text-3xl">{t.emoji}</span>
+                  <div className="flex items-center gap-2">
+                    <span className={`font-oswald text-[10px] tracking-widest uppercase border border-[#e8b84b]/30 text-[#e8b84b] px-2 py-1 transition-colors ${isOpen ? "bg-[#e8b84b]/10" : ""}`}>
+                      {t.tag}
+                    </span>
+                    <Icon name={isOpen ? "ChevronUp" : "ChevronDown"} size={16} className="text-[#e8b84b]/60" />
+                  </div>
+                </div>
+                <div className="font-mono text-[9px] text-white/30 uppercase tracking-widest mb-2">{t.region}</div>
+                <h3 className={`font-oswald text-xl font-semibold uppercase leading-tight mb-3 transition-colors ${isOpen ? "text-[#e8b84b]" : ""}`}>
+                  {t.title}
+                </h3>
+                <p className="text-white/40 text-sm leading-relaxed">{t.desc}</p>
+              </div>
+
+              {isOpen && (
+                <div className="px-8 pb-8 border-t border-[#e8b84b]/10 pt-6">
+                  <ul className="flex flex-col gap-4">
+                    {t.details.map((d, j) => (
+                      <li key={j} className="text-white/60 text-sm leading-relaxed">{d}</li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => {
+                      const el = document.querySelector("#contacts");
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className="mt-6 w-full bg-[#e8b84b] text-[#08101f] font-oswald text-xs tracking-widest uppercase px-6 py-3 font-semibold hover:bg-[#f5d080] transition-colors"
+                  >
+                    Купить билет
+                  </button>
+                </div>
+              )}
+            </div>
+          </AnimSection>
+        );
+      })}
     </div>
   );
 }
@@ -360,30 +452,7 @@ export default function Index() {
             </div>
           </AnimSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TRAVEL.map((t, i) => (
-              <AnimSection key={t.title}>
-                <div className="group border border-white/8 hover:border-[#e8b84b]/30 p-8 cursor-pointer transition-all duration-300 hover:bg-[#0d1a30]"
-                  style={{ transitionDelay: `${i * 80}ms` }}>
-                  <div className="flex items-start justify-between mb-6">
-                    <span className="text-3xl">{t.emoji}</span>
-                    <span className="font-oswald text-[10px] tracking-widest uppercase border border-[#e8b84b]/30 text-[#e8b84b] px-2 py-1 group-hover:bg-[#e8b84b]/10 transition-colors">
-                      {t.tag}
-                    </span>
-                  </div>
-                  <div className="font-mono text-[9px] text-white/30 uppercase tracking-widest mb-2">{t.region}</div>
-                  <h3 className="font-oswald text-xl font-semibold uppercase leading-tight mb-3 group-hover:text-[#e8b84b] transition-colors">
-                    {t.title}
-                  </h3>
-                  <p className="text-white/40 text-sm leading-relaxed">{t.desc}</p>
-                  <div className="flex items-center gap-2 mt-6 text-[#e8b84b] opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="font-oswald text-xs tracking-widest uppercase">Узнать подробнее</span>
-                    <Icon name="ArrowRight" size={14} />
-                  </div>
-                </div>
-              </AnimSection>
-            ))}
-          </div>
+          <TravelCards />
         </div>
       </section>
 
