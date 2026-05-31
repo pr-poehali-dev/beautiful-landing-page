@@ -93,7 +93,7 @@ export default function Index() {
             <Icon name="Plane" size={16} className="text-[#08101f]" />
           </div>
           <span className="font-oswald text-lg font-semibold tracking-widest uppercase text-white">
-            АвиаТур<span className="text-[#e8b84b]">.</span>Абакан
+            ИП<span className="text-[#e8b84b]"> </span>Миронова
           </span>
         </div>
         <div className="hidden md:flex items-center gap-8">
@@ -406,7 +406,7 @@ export default function Index() {
               <Icon name="Plane" size={12} className="text-[#08101f]" />
             </div>
             <span className="font-oswald text-sm tracking-widest uppercase text-white/50">
-              АвиаТур<span className="text-[#e8b84b]">.</span>Абакан
+              ИП<span className="text-[#e8b84b]"> </span>Миронова
             </span>
           </div>
           <div className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
