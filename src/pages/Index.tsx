@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Обо мне", href: "#about" },
   { label: "Услуги", href: "#services" },
   { label: "Портфолио", href: "#portfolio" },
+  { label: "Путешествия", href: "#travel" },
   { label: "Блог", href: "#blog" },
   { label: "Контакты", href: "#contacts" },
 ];
@@ -24,6 +25,51 @@ const PORTFOLIO = [
   { title: "Москва — Абакан", type: "Авиа", tag: "Популярный маршрут", img: PLANE_IMG },
   { title: "Абакан — Красноярск", type: "ЖД", tag: "Ежедневно", img: TRAIN_IMG },
   { title: "Абакан — Новосибирск", type: "Авиа + ЖД", tag: "Лучшая цена", img: PLANE_IMG },
+];
+
+const TRAVEL = [
+  {
+    region: "Хакасия",
+    title: "Природные заповедники",
+    desc: "Озеро Шира, Сундуки, Хакасский заповедник — уникальная природа Южной Сибири у порога.",
+    tag: "Природа",
+    emoji: "🏔️",
+  },
+  {
+    region: "Хакасия",
+    title: "Древние курганы и петроглифы",
+    desc: "Салбыкский курган, Большой Салбык — загадочные памятники древних цивилизаций.",
+    tag: "История",
+    emoji: "🗿",
+  },
+  {
+    region: "Красноярский край",
+    title: "Красноярские Столбы",
+    desc: "Знаменитый заповедник со скальными останцами. Идеально для активного отдыха.",
+    tag: "Активный",
+    emoji: "🧗",
+  },
+  {
+    region: "Тыва",
+    title: "Туva — край шаманов",
+    desc: "Кызыл, центр Азии, горловое пение. Экзотика совсем рядом — 5 часов от Абакана.",
+    tag: "Экзотика",
+    emoji: "🎶",
+  },
+  {
+    region: "Алтай",
+    title: "Горный Алтай",
+    desc: "Чуйский тракт, Телецкое озеро, Мультинские озёра. Один из красивейших регионов России.",
+    tag: "Горы",
+    emoji: "⛰️",
+  },
+  {
+    region: "Иркутская область",
+    title: "Байкал",
+    desc: "Глубочайшее озеро планеты. Листвянка, КБЖД, Ольхон — места, которые меняют восприятие мира.",
+    tag: "Озеро",
+    emoji: "🌊",
+  },
 ];
 
 const BLOG = [
@@ -289,6 +335,50 @@ export default function Index() {
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="font-mono text-[9px] text-[#e8b84b]/70 uppercase tracking-widest mb-2">{p.tag}</div>
                     <h3 className="font-oswald text-xl font-bold uppercase">{p.title}</h3>
+                  </div>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRAVEL */}
+      <section id="travel" className="py-28 px-6 md:px-16" style={{ background: "linear-gradient(180deg, #08101f 0%, #0d1528 100%)" }}>
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+              <div>
+                <div className="font-mono text-[10px] tracking-widest text-[#e8b84b] uppercase mb-4">// 04. Путешествия</div>
+                <h2 className="font-oswald text-4xl md:text-6xl font-bold uppercase leading-tight">
+                  Хакасия<br /><span className="text-[#e8b84b]">и соседи</span>
+                </h2>
+              </div>
+              <p className="font-cormorant text-lg text-white/50 italic max-w-xs">
+                Уникальные маршруты по региону — помогу добраться до любой точки
+              </p>
+            </div>
+          </AnimSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TRAVEL.map((t, i) => (
+              <AnimSection key={t.title}>
+                <div className="group border border-white/8 hover:border-[#e8b84b]/30 p-8 cursor-pointer transition-all duration-300 hover:bg-[#0d1a30]"
+                  style={{ transitionDelay: `${i * 80}ms` }}>
+                  <div className="flex items-start justify-between mb-6">
+                    <span className="text-3xl">{t.emoji}</span>
+                    <span className="font-oswald text-[10px] tracking-widest uppercase border border-[#e8b84b]/30 text-[#e8b84b] px-2 py-1 group-hover:bg-[#e8b84b]/10 transition-colors">
+                      {t.tag}
+                    </span>
+                  </div>
+                  <div className="font-mono text-[9px] text-white/30 uppercase tracking-widest mb-2">{t.region}</div>
+                  <h3 className="font-oswald text-xl font-semibold uppercase leading-tight mb-3 group-hover:text-[#e8b84b] transition-colors">
+                    {t.title}
+                  </h3>
+                  <p className="text-white/40 text-sm leading-relaxed">{t.desc}</p>
+                  <div className="flex items-center gap-2 mt-6 text-[#e8b84b] opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="font-oswald text-xs tracking-widest uppercase">Узнать подробнее</span>
+                    <Icon name="ArrowRight" size={14} />
                   </div>
                 </div>
               </AnimSection>
