@@ -106,6 +106,19 @@ const TRAVEL = [
       "✈️ Как добраться: авиарейс Абакан–Иркутск (1,5 часа) или поезд (15–18 часов). Оформлю любой вариант.",
     ],
   },
+  {
+    region: "Любое направление",
+    title: "И другие направления",
+    desc: "Хотите куда-то ещё? Помогу найти билеты в любую точку России и мира.",
+    tag: "Под запрос",
+    emoji: "🌐",
+    details: [
+      "✈️ Любые авиамаршруты — Москва, Санкт-Петербург, Сочи, Казань, за рубеж и не только.",
+      "🚂 ЖД билеты по всей России — любое направление, любой класс вагона.",
+      "🗺️ Индивидуальный подбор маршрута — расскажите куда хотите, и я найду оптимальный вариант.",
+      "📞 Просто свяжитесь со мной — опишите желаемое направление и даты, и я оформлю всё быстро.",
+    ],
+  },
 ];
 
 const BLOG = [
@@ -310,7 +323,7 @@ export default function Index() {
           </AnimSection>
 
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-sm">
-            {[["500+", "Маршрутов"], ["10 лет", "Опыта"], ["24/7", "Поддержка"]].map(([num, label]) => (
+            {[["500+", "Маршрутов"], ["20 лет", "Опыта"], ["24/7", "Поддержка"]].map(([num, label]) => (
               <AnimSection key={label}>
                 <div className="text-center">
                   <div className="font-oswald text-2xl font-bold text-[#e8b84b]">{num}</div>
@@ -336,7 +349,7 @@ export default function Index() {
               <img src={TRAIN_IMG} alt="Поезд" className="w-full h-96 object-cover"
                 style={{ clipPath: "polygon(0 0, 90% 0, 100% 10%, 100% 100%, 10% 100%, 0 90%)" }} />
               <div className="absolute -bottom-6 -right-6 bg-[#e8b84b] text-[#08101f] p-6 font-oswald">
-                <div className="text-3xl font-bold">10</div>
+                <div className="text-3xl font-bold">20</div>
                 <div className="text-xs tracking-widest uppercase font-semibold">Лет в деле</div>
               </div>
               <div className="absolute top-4 left-4 border border-[#e8b84b]/30 px-3 py-1.5">
@@ -351,7 +364,7 @@ export default function Index() {
                 Личный<br /><span className="text-[#e8b84b]">помощник</span><br />в путешествии
               </h2>
               <p className="font-cormorant text-lg text-white/60 italic mb-6 leading-relaxed">
-                Уже более 10 лет я помогаю жителям Абакана и Хакасии находить лучшие билеты на самолёты и поезда. Каждый маршрут — это моя личная ответственность.
+                Уже более 20 лет я помогаю жителям Абакана и Хакасии находить лучшие билеты на самолёты и поезда. Каждый маршрут — это моя личная ответственность.
               </p>
               <p className="text-white/50 text-sm leading-relaxed mb-8">
                 Работаю со всеми крупными перевозчиками: Аэрофлот, S7, Победа, РЖД и другие. Помогаю с выбором оптимального маршрута, оформляю билеты быстро и без лишних хлопот.
