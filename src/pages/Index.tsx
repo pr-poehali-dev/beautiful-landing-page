@@ -355,8 +355,9 @@ export default function Index() {
             <AnimSection>
               <div className="flex flex-col gap-6">
                 {[
-                  { icon: "Phone", label: "Телефон", value: "+7 (3902) 000-000" },
-                  { icon: "MapPin", label: "Адрес", value: "г. Абакан, ул. Ленина 1" },
+                  { icon: "Phone", label: "Телефон", value: "+7 (913) 440-59-16" },
+                  { icon: "User", label: "Специалист", value: "Миронова Ольга Петровна" },
+                  { icon: "MapPin", label: "Адрес", value: "просп. Ленина, 70А, Абакан" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Пт 9:00–19:00, Сб 10:00–16:00" },
                 ].map(c => (
                   <div key={c.label} className="flex items-start gap-4 group cursor-pointer">
